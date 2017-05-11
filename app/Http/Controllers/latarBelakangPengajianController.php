@@ -7,12 +7,12 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 
 use Auth;
-use App\latarBelakangPengajian;
+use App\LatarBelakangPengajian;
 
 class latarBelakangPengajianController extends Controller
 {
     public function showLatarBelakangPengajian(){
-    	$latarBelakangPengajians = latarBelakangPengajian::where('user_id', Auth::user()->id)->paginate(5);
+    	$latarBelakangPengajians = LatarBelakangPengajian::where('user_id', Auth::user()->id)->paginate(5);
 
     	return view('user.latarBelakangPengajian', compact('latarBelakangPengajians'));
     }
@@ -21,14 +21,14 @@ class latarBelakangPengajianController extends Controller
     	
     	$input = $request->all();
 
-		latarBelakangPengajian::create($input);
+		LatarBelakangPengajian::create($input);
 
 		return redirect()->back();
     }
 
     public function deleteLatarBelakangPengajian(Request $request){
     	
-    	$latarBelakangPengajians = latarBelakangPengajian::findOrFail($request->latarBelakangPengajian_id);
+    	$latarBelakangPengajians = LatarBelakangPengajian::findOrFail($request->latarBelakangPengajian_id);
 
 		foreach($latarBelakangPengajians as $latarBelakangPengajian){
     		$latarBelakangPengajian->delete();
@@ -40,7 +40,7 @@ class latarBelakangPengajianController extends Controller
     public function updateLatarBelakangPengajian(Request $request){
 
 		$input = $request->all();
-		$latarBelakangPengajian = latarBelakangPengajian::findOrFail($input['id']);
+		$latarBelakangPengajian = LatarBelakangPengajian::findOrFail($input['id']);
 		$latarBelakangPengajian->institusi = $input['institusi'];
 		$latarBelakangPengajian->tahap_kelulusan = $input['tahap_kelulusan'];
 		$latarBelakangPengajian->nama_kelulusan = $input['nama_kelulusan'];
