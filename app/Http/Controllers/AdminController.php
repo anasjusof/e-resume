@@ -11,7 +11,7 @@ use App\User;
 class AdminController extends Controller
 {
     public function index(){
-    	$users = User::paginate(5);
+    	$users = User::where('roles_id', 0)->paginate(5);
 
     	return view('admin.index', compact('users'));
     }

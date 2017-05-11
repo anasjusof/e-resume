@@ -31,4 +31,13 @@ Route::post('/createlatarbelakangpengajian', ['uses'=>'latarBelakangPengajianCon
 Route::patch('/updatelatarbelakangpengajian', ['uses'=>'latarBelakangPengajianController@updateLatarBelakangPengajian'])->name('updateLatarBelakangPengajian');
 Route::delete('/deletelatarbelakangpengajian', ['uses'=>'latarBelakangPengajianController@deleteLatarBelakangPengajian'])->name('deleteLatarBelakangPengajian');
 
+Route::get('/penyeliaan', ['uses'=>'PenyeliaanController@showPenyeliaan'])->name('showPenyeliaanController');
+Route::post('/createpenyeliaan', ['uses'=>'PenyeliaanController@createPenyeliaan'])->name('createPenyeliaanController');
+Route::patch('/updatepenyeliaan', ['uses'=>'PenyeliaanController@updatePenyeliaan'])->name('updatePenyeliaanController');
+Route::delete('/deletepenyeliaan', ['uses'=>'PenyeliaanController@deletePenyeliaan'])->name('deletePenyeliaanController');
+
+Route::get('/pengajaran', ['uses'=>'PengajaranController@showPengajaran'])->name('showPengajaranController');
+Route::post('/createpengajaran', ['uses'=>'PengajaranController@createPengajaran'])->name('createPengajaranController');
+Route::patch('/updatepengajaran', ['uses'=>'PengajaranController@updatePengajaran'])->name('updatePengajaranController');
+Route::delete('/deletepengajaran', ['uses'=>'PengajaranController@deletePengajaran'])->name('deletePengajaranController');
 
