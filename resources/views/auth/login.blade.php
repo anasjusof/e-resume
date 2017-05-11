@@ -86,10 +86,19 @@ License: You must have a valid license purchased only from themeforest(the above
             <input class="form-control form-control-solid placeholder-no-fix" type="password" autocomplete="off" placeholder="Password" name="password"/>
         </div>
         <div class="form-actions text-center">
-            <button type="submit" class="btn btn-success uppercase ">Login</button>
+            <div class="col-md-6">
+                <button type="submit" class="btn btn-success uppercase " style="min-width: 130px;">Log Masuk</button>
+            </div>
+            <div class="col-md-6">
+                <a href="{{ route('showRegister') }}" class="btn btn-primary uppercase" style="font-weight: 600;
+padding: 10px 20px !important; min-width: 130px;">Daftar</a>
+            </div>
+            
+
+            
         </div>
         <div class="form-actions text-center">
-            <a href="{{ route('showRegister') }}" class="btn blue uppercase"> Register </a>
+            
         </div>
         <div class="create-account">
             <p style="color:white;">

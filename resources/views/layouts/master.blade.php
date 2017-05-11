@@ -170,17 +170,17 @@ License: You must have a valid license purchased only from themeforest(the above
 					</a>
 					<ul class="sub-menu">
 						<li>
-							<a href="{{ route('admin.index') }}">
+							<a href="">
 							<i class="fa fa-dashboard"></i>
 							Dashboard</a>
 						</li>
 						<li>
-							<a href="{{ route('admin.manage-user') }}">
+							<a href="">
 							<i class="fa fa-user"></i>
 							Users Management</a>
 						</li>
 						<li>
-							<a href="{{ route('admin.manage-faculty') }}">
+							<a href="">
 							<i class="fa fa-institution"></i>
 							Faculties Management</a>
 						</li>

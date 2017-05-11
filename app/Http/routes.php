@@ -12,7 +12,18 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    //return view('welcome');
+    if(Auth::check()){
+		if(Auth::user()->roles_id == 1){                // If roles id == 2, redirect to /dekan            
+	      return redirect('senaraipensyarah');
+	    }
+	    if(Auth::user()->roles_id == 0){                // If roles id == 2, redirect to /dekan            
+	      return redirect('maklumatperibadi');
+	    }
+	}
+	else{
+		return redirect('/login');
+	}
 });
 
 Route::auth();
