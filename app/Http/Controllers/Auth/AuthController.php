@@ -52,6 +52,10 @@ class AuthController extends Controller
             'name' => 'required|max:255',
             'email' => 'required|email|max:255|unique:users',
             'password' => 'required|min:6|confirmed',
+            'jawatan' => 'required',
+            'jabatan' => 'required',
+            'fakulti' => 'required',
+            'phone' => 'required',
         ]);
     }
 
@@ -66,6 +70,10 @@ class AuthController extends Controller
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
+            'jabatan' => $data['jabatan'],
+            'jawatan' => $data['jawatan'],
+            'fakulti' => $data['fakulti'],
+            'phone' => $data['phone'],
             'password' => bcrypt($data['password']),
         ]);
     }
