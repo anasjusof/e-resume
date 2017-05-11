@@ -21,6 +21,8 @@ Route::get('/home', 'HomeController@index');
 
 Route::get('/showRegister', ['uses'=>'UserController@showRegister'])->name('showRegister');
 
+Route::get('/senaraipensyarah', ['uses'=>'AdminController@index'])->name('admin.index');
+
 Route::get('/maklumatperibadi', ['uses'=>'UserController@showMaklumatPeribadi'])->name('showMaklumatPeribadi');
 Route::patch('/updatemaklumatperibadi', ['uses'=>'UserController@updateMaklumatPeribadi'])->name('updateMaklumatPeribadi');
 
