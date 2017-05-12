@@ -29,6 +29,7 @@ class AuthController extends Controller
      * @var string
      */
     protected $redirectTo = '/';
+    protected $username = 'staff_id';
 
     /**
      * Create a new authentication controller instance.
@@ -56,6 +57,7 @@ class AuthController extends Controller
             'jabatan' => 'required',
             'fakulti' => 'required',
             'phone' => 'required',
+            'staff_id' => 'required|unique:users',
         ]);
     }
 
@@ -74,6 +76,7 @@ class AuthController extends Controller
             'jawatan' => $data['jawatan'],
             'fakulti' => $data['fakulti'],
             'phone' => $data['phone'],
+            'staff_id' => $data['staff_id'],
             'password' => bcrypt($data['password']),
         ]);
     }

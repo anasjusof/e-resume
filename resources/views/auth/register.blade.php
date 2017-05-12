@@ -81,40 +81,43 @@ License: You must have a valid license purchased only from themeforest(the above
         </p>
         <div class="form-group">
             <label class="control-label visible-ie8 visible-ie9">Nama</label>
-            <input class="form-control input-underline-creamy" type="text" placeholder="Nama Penuh" name="name" value="{{ old('name') }}"/>
+            <input class="form-control " type="text" placeholder="Nama Penuh" name="name" value="{{ old('name') }}"/>
         </div>
         <div class="form-group">
             <label class="control-label visible-ie8 visible-ie9">Jawatan</label>
-            <input class="form-control input-underline-creamy" type="text" autocomplete="off" placeholder="Jawatan" name="jawatan" value="{{ old('jawatan') }}" />
+            <input class="form-control " type="text" autocomplete="off" placeholder="Jawatan" name="jawatan" value="{{ old('jawatan') }}" />
         </div>
         <div class="form-group">
             <label class="control-label visible-ie8 visible-ie9">Fakulti</label>
-            <input class="form-control input-underline-creamy" type="text" autocomplete="off" placeholder="Fakulti" name="fakulti" value="{{ old('fakulti') }}" />
+            <input class="form-control " type="text" autocomplete="off" placeholder="Fakulti" name="fakulti" value="{{ old('fakulti') }}" />
         </div>
         <div class="form-group">
             <label class="control-label visible-ie8 visible-ie9">Jabatan</label>
-            <input class="form-control input-underline-creamy" type="text" autocomplete="off" placeholder="Jabatan" name="jabatan" value="{{ old('jabatan') }}" />
+            <input class="form-control " type="text" autocomplete="off" placeholder="Jabatan" name="jabatan" value="{{ old('jabatan') }}" />
         </div>
         <div class="form-group">
             <label class="control-label visible-ie8 visible-ie9">No Telefon</label>
-            <input class="form-control input-underline-creamy" type="text" autocomplete="off" placeholder="No Telefon" name="phone" value="{{ old('phone') }}" />
+            <input class="form-control " type="text" autocomplete="off" placeholder="No Telefon" name="phone" value="{{ old('phone') }}" />
         </div>
 
         <p class="hint" style="font-size: medium; padding-top: 50px;">
              Isi maklumat akaun anda
         </p>
-
+        <div class="form-group">
+            <label class="control-label visible-ie8 visible-ie9">ID Staf</label>
+            <input class="form-control " type="text" autocomplete="off" placeholder="ID Staf" name="staff_id" value="{{ old('staff_id') }}" />
+        </div>
         <div class="form-group">
             <label class="control-label visible-ie8 visible-ie9">Email</label>
-            <input class="form-control input-underline-creamy" type="text" autocomplete="off" placeholder="Email" name="email" value="{{ old('email') }}" />
+            <input class="form-control " type="text" autocomplete="off" placeholder="Email" name="email" value="{{ old('email') }}" />
         </div>
         <div class="form-group">
             <label class="control-label visible-ie8 visible-ie9">Password</label>
-            <input class="form-control input-underline-creamy" type="password" autocomplete="off" id="register_password" placeholder="Password" name="password"/>
+            <input class="form-control " type="password" autocomplete="off" id="register_password" placeholder="Password" name="password"/>
         </div>
         <div class="form-group">
             <label class="control-label visible-ie8 visible-ie9">Re-type Your Password</label>
-            <input class="form-control input-underline-creamy" type="password" autocomplete="off" placeholder="Re-type Your Password" name="password_confirmation"/>
+            <input class="form-control " type="password" autocomplete="off" placeholder="Re-type Your Password" name="password_confirmation"/>
         </div>
         <!--
         <div class="form-group margin-top-20 margin-bottom-20">
