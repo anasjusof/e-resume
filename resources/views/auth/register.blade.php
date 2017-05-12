@@ -66,7 +66,7 @@ License: You must have a valid license purchased only from themeforest(the above
 <!-- BEGIN LOGIN -->
 <div class="content">
     <!-- BEGIN REGISTRATION FORM -->
-    <form class="form-horizontal" role="form" method="POST" action="{{ url('/register') }}">
+    <form class="form-horizontal" role="form" method="POST" action="{{ url('/register') }}" enctype="multipart/form-data">
         {{ csrf_field() }}
         <div class="form-title text-center">
             <span class="form-title uppercase" 
@@ -112,12 +112,19 @@ License: You must have a valid license purchased only from themeforest(the above
             <input class="form-control " type="text" autocomplete="off" placeholder="Email" name="email" value="{{ old('email') }}" />
         </div>
         <div class="form-group">
-            <label class="control-label visible-ie8 visible-ie9">Password</label>
+            <label class="control-label visible-ie8 visible-ie9">Katalaluan</label>
             <input class="form-control " type="password" autocomplete="off" id="register_password" placeholder="Password" name="password"/>
         </div>
         <div class="form-group">
-            <label class="control-label visible-ie8 visible-ie9">Re-type Your Password</label>
+            <label class="control-label visible-ie8 visible-ie9">Taip Kembali Katalaluan</label>
             <input class="form-control " type="password" autocomplete="off" placeholder="Re-type Your Password" name="password_confirmation"/>
+        </div>
+        <div class="form-group">
+            <input id="image" class="form-control hidden" type="file" autocomplete="off" placeholder="Gambar" name="image"/>
+            <label for="image" style="    padding: 5px 10px; background: #dde3ec; border: 1px solid; color: #8290a3;">
+            <i class="fa fa-file-image-o"></i>
+            Upload Gambar
+            </label>
         </div>
         <!--
         <div class="form-group margin-top-20 margin-bottom-20">

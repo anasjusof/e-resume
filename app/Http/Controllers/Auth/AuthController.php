@@ -69,6 +69,18 @@ class AuthController extends Controller
      */
     protected function create(array $data)
     {
+        $filename = '';
+
+        if(!empty($data['image'])){
+
+            $file = $data['image'];
+
+            $filename = time() . $file->getClientOriginalName();
+
+            $file->move('images', $filename);
+
+        }
+
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
@@ -78,6 +90,7 @@ class AuthController extends Controller
             'phone' => $data['phone'],
             'staff_id' => $data['staff_id'],
             'password' => bcrypt($data['password']),
+            'image' =>  $filename,
         ]);
     }
 }
