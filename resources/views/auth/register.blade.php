@@ -113,11 +113,11 @@ License: You must have a valid license purchased only from themeforest(the above
         </div>
         <div class="form-group">
             <label class="control-label visible-ie8 visible-ie9">Katalaluan</label>
-            <input class="form-control " type="password" autocomplete="off" id="register_password" placeholder="Password" name="password"/>
+            <input class="form-control " type="password" autocomplete="off" id="register_password" placeholder="Kata Laluan" name="password"/>
         </div>
         <div class="form-group">
             <label class="control-label visible-ie8 visible-ie9">Taip Kembali Katalaluan</label>
-            <input class="form-control " type="password" autocomplete="off" placeholder="Re-type Your Password" name="password_confirmation"/>
+            <input class="form-control " type="password" autocomplete="off" placeholder="Taip Kembali Kata Laluan" name="password_confirmation"/>
         </div>
         <div class="form-group">
             <input id="image" class="form-control hidden" type="file" autocomplete="off" placeholder="Gambar" name="image"/>
