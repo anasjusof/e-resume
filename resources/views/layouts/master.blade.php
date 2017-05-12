@@ -164,35 +164,18 @@ License: You must have a valid license purchased only from themeforest(the above
 				</li>
 				@if(Auth::user()->roles_id == 1)
 				<li>
-					<a href="javascript:;">
-					<i class="icon-home"></i>
-					<span class="title">Admin</span>
-					</a>
-					<ul class="sub-menu">
-						<li>
-							<a href="">
-							<i class="fa fa-dashboard"></i>
-							Dashboard</a>
-						</li>
-						<li>
-							<a href="">
-							<i class="fa fa-user"></i>
-							Users Management</a>
-						</li>
-						<li>
-							<a href="">
-							<i class="fa fa-institution"></i>
-							Faculties Management</a>
-						</li>
-					</ul>
-				</li>
-
-				@endif
-				@if(Auth::user()->roles_id == 2)
-				<li>
-					<a href="{{ route('dekan.index') }}" class="li-hover">
+					<a href="{{ route('admin.index') }}" class="li-hover">
 					<i class="fa fa-calendar hover-icon"></i>
-					<span class="title">Histori Permohonan Perlepasan</span>
+					<span class="title">Senarai Pensyarah</span>
+					</a>
+				</li>
+				@endif
+
+				@if(Auth::user()->roles_id == 0)
+				<li>
+					<a href="{{ route('showMaklumatPeribadi') }}" class="li-hover">
+					<i class="fa fa-calendar hover-icon"></i>
+					<span class="title">Maklumat Peribadi</span>
 					</a>
 					<!--
 					<ul class="sub-menu">
@@ -208,6 +191,24 @@ License: You must have a valid license purchased only from themeforest(the above
 						</li>
 					</ul>
 					-->
+				</li>
+				<li>
+					<a href="{{ route('showLatarBelakangPengajian') }}" class="li-hover">
+					<i class="fa fa-calendar hover-icon"></i>
+					<span class="title">Latar Belakang Pengajian</span>
+					</a>
+				</li>
+				<li>
+					<a href="{{ route('showPenyeliaanController') }}" class="li-hover">
+					<i class="fa fa-calendar hover-icon"></i>
+					<span class="title">Penyeliaan</span>
+					</a>
+				</li>
+				<li>
+					<a href="{{ route('showPengajaranController') }}" class="li-hover">
+					<i class="fa fa-calendar hover-icon"></i>
+					<span class="title">Pengajaran</span>
+					</a>
 				</li>
 				@endif
 				@if(Auth::user()->roles_id == 3)
