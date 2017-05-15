@@ -30,6 +30,8 @@ Route::auth();
 
 Route::get('/home', 'HomeController@index');
 
+Route::get('/resume', ['uses'=>'ResumeController@index'])->name('showResume');
+
 Route::get('/showRegister', ['uses'=>'UserController@showRegister'])->name('showRegister');
 
 Route::get('/senaraipensyarah', ['uses'=>'AdminController@index'])->name('admin.index');
