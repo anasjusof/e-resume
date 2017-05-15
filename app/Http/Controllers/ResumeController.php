@@ -6,9 +6,33 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
+use Auth;
+
+use App\User;
+use App\LatarBelakangPengajian;
+use App\Penyeliaan;
+use App\Pengajaran;
+
 class ResumeController extends Controller
 {
-    public function index(){
-        return view('resume.index');
+    public function index($u_id){
+        
+        if(Auth::user()->roles_id == 0){
+            $user_id = Auth::user()->id;
+        }
+        
+        if(Auth::user()->roles_id != 0){
+            $user_id = $u_id;
+        }
+        
+        $user = User::find($user_id);
+            
+        $latar_belakang_pengajians = LatarBelakangPengajian::where('user_id', $user_id)->get();
+        
+        $penyeliaans = Penyeliaan::where('user_id', $user_id)->get();
+        
+        $pengajarans = Pengajaran::where('user_id', $user_id)->get();
+        
+        return view('resume.index', compact('user', 'latar_belakang_pengajians', 'penyeliaans', 'pengajarans'));
     }   
 }

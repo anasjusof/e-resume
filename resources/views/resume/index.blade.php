@@ -17,40 +17,40 @@
     <tbody>
         <tr valign="top">
             <td rowspan="7" width="50%">
-                <p>&nbsp;</p>
+                <img height="300px" width="auto" src="{{url('images/'.$user->image)}}"
             </td>
             <td width="50%">
-                <p>Nama</p>
-            </td>
-        </tr>
-        <tr valign="top">
-            <td width="50%">
-                <p>Staff ID</p>
+                <p>{{ $user->name }}</p>
             </td>
         </tr>
         <tr valign="top">
             <td width="50%">
-                <p>Jawatan</p>
+                <p>{{ $user->staff_id }}</p>
             </td>
         </tr>
         <tr valign="top">
             <td width="50%">
-                <p>Jabatan</p>
+                <p>{{ $user->jawatan }}</p>
             </td>
         </tr>
         <tr valign="top">
             <td width="50%">
-                <p>Fakulti</p>
+                <p>{{ $user->jabatan }}</p>
             </td>
         </tr>
         <tr valign="top">
             <td width="50%">
-                <p>Email</p>
+                <p>{{ $user->fakulti }}</p>
             </td>
         </tr>
         <tr valign="top">
             <td width="50%">
-                <p>Phone</p>
+                <p>{{ $user->email }}</p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td width="50%">
+                <p>{{ $user->phone }}</p>
             </td>
         </tr>
     </tbody>
@@ -73,34 +73,24 @@
                 <p><u><strong>Nama Kelulusan</strong></u></p>
             </td>
         </tr>
+        <?php $count1 = 1; ?>
+        @foreach($latar_belakang_pengajians as $latar_belakang_pengajian)
         <tr valign="top">
             <td width="25%">
-                <p>1</p>
+                <p>{{ $count1 }}</p>
             </td>
             <td width="25%">
-                <p>UTeM</p>
+                <p>{{ $latar_belakang_pengajian->institusi }}</p>
             </td>
             <td width="25%">
-                <p>Diploma</p>
+                <p>{{ $latar_belakang_pengajian->tahap_kelulusan }}</p>
             </td>
             <td width="25%">
-                <p>IT</p>
+                <p>{{ $latar_belakang_pengajian->nama_kelulusan }}</p>
             </td>
         </tr>
-        <tr valign="top">
-            <td width="25%">
-                <p>2</p>
-            </td>
-            <td width="25%">
-                <p>UTeM</p>
-            </td>
-            <td width="25%">
-                <p>Sarjana Muda</p>
-            </td>
-            <td width="25%">
-                <p>IT</p>
-            </td>
-        </tr>
+        <?php $count1++ ?>
+        @endforeach
     </tbody>
 </table>
 <p>&nbsp;</p>
@@ -131,50 +121,35 @@
                 <p><u><strong>Status</strong></u></p>
             </td>
         </tr>
+        <?php $count2 = 1; ?>
+        @foreach($penyeliaans as $penyeliaan)
         <tr valign="top">
             <td width="17%">
-                <p>1</p>
+                <p>{{ $count2 }}</p>
             </td>
             <td width="17%">
-                <p>Ahmad Albab</p>
+                <p>{{ $penyeliaan->nama }}</p>
             </td>
             <td width="17%">
-                <p>B031210244</p>
+                <p>{{ $penyeliaan->no_matrik }}</p>
             </td>
             <td width="17%">
-                <p>Fuzzy Logic</p>
+                <p>{{ $penyeliaan->tajuk }}</p>
             </td>
             <td width="17%">
-                <p>3</p>
+                <p>{{ $penyeliaan->sem }}</p>
             </td>
             <td width="17%">
-                <p>Lulus</p>
+                <p>{{ $penyeliaan->status }}</p>
             </td>
         </tr>
-        <tr valign="top">
-            <td width="17%">
-                <p>2</p>
-            </td>
-            <td width="17%">
-                <p>Syukri Mohd</p>
-            </td>
-            <td width="17%">
-                <p>B021213578</p>
-            </td>
-            <td width="17%">
-                <p>Image Processing</p>
-            </td>
-            <td width="17%">
-                <p>4</p>
-            </td>
-            <td width="17%">
-                <p>Gagal</p>
-            </td>
-        </tr>
+        <?php $count2++ ?>
+        @endforeach
     </tbody>
 </table>
 <p>&nbsp;</p>
 <hr>
+<p>&nbsp;</p>
 <p><strong>Pengajaran</strong></p>
 <table width="100%" cellspacing="0" cellpadding="4">
     <tbody>
@@ -198,48 +173,36 @@
                 <p><u><strong>Tahap</strong></u></p>
             </td>
         </tr>
+        <?php $count3 = 1; ?>
+        @foreach($pengajarans as $pengajaran)
         <tr valign="top">
             <td width="17%">
-                <p>1</p>
+                <p>{{ $count3 }}</p>
             </td>
             <td width="17%">
-                <p>DITS</p>
+                <p>{{ $pengajaran->kod_kursus }}</p>
             </td>
             <td width="17%">
-                <p>Information Security</p>
+                <p>{{ $pengajaran->nama_kursus }}</p>
             </td>
             <td width="17%">
-                <p>3</p>
+                <p>{{ $pengajaran->sem }}</p>
             </td>
             <td width="17%">
-                <p>33</p>
+                <p>{{ $pengajaran->bil_pelajar }}</p>
             </td>
             <td width="17%">
-                <p>Diploma</p>
+                <p>{{ $pengajaran->tahap }}</p>
             </td>
         </tr>
-        <tr valign="top">
-            <td width="17%">
-                <p>2</p>
-            </td>
-            <td width="17%">
-                <p>BACS</p>
-            </td>
-            <td width="17%">
-                <p>Computer Science</p>
-            </td>
-            <td width="17%">
-                <p>4</p>
-            </td>
-            <td width="17%">
-                <p>17</p>
-            </td>
-            <td width="17%">
-                <p>Sarjana Muda</p>
-            </td>
-        </tr>
+        <?php $count3++ ?>
+        @endforeach
     </tbody>
 </table>
 <p>&nbsp;</p>
 </div>
 </body>
+
+<script>
+    window.print();
+</script>

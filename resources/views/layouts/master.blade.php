@@ -210,6 +210,12 @@ License: You must have a valid license purchased only from themeforest(the above
 					<span class="title">Pengajaran</span>
 					</a>
 				</li>
+                                <li>
+					<a target="_blank" href="{{ url('/resume/0') }}" class="li-hover">
+					<i class="fa fa-calendar hover-icon"></i>
+					<span class="title">Cetak Resume</span>
+					</a>
+				</li>
 				@endif
 				@if(Auth::user()->roles_id == 3)
 				<li>

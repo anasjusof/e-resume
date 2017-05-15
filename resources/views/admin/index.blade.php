@@ -57,7 +57,7 @@
 	                            <td> {{ $user->jabatan}} </td>
 	                            <td> {{ $user->email }}</td>
 	                            <td> {{ $user->phone }}</td>
-	                            <td> <button id="cetak" class="btn green">Cetak</button></td>
+	                            <td> <a target="_blank" href="{{ url('/resume/'.$user->id) }}" id="" class="btn green">Cetak</a></td>
 	                        </tr>
 	                        <?php $count++ ?>
 	                        @endforeach
