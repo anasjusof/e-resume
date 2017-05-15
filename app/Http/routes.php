@@ -54,3 +54,8 @@ Route::post('/createpengajaran', ['uses'=>'PengajaranController@createPengajaran
 Route::patch('/updatepengajaran', ['uses'=>'PengajaranController@updatePengajaran'])->name('updatePengajaranController');
 Route::delete('/deletepengajaran', ['uses'=>'PengajaranController@deletePengajaran'])->name('deletePengajaranController');
 
+Route::get('/kajiandanpenyelidikan', ['uses'=>'KajianDanPenyelidikanController@showKajianDanPenyelidikan'])->name('showKajianDanPenyelidikanController');
+Route::post('/createkajiandanpenyelidikan', ['uses'=>'KajianDanPenyelidikanController@createKajianDanPenyelidikan'])->name('createKajianDanPenyelidikanController');
+Route::patch('/updatekajiandanpenyelidikan', ['uses'=>'KajianDanPenyelidikanController@updateKajianDanPenyelidikan'])->name('updateKajianDanPenyelidikanController');
+Route::delete('/deletekajiandanpenyelidikan', ['uses'=>'KajianDanPenyelidikanController@deleteKajianDanPenyelidikan'])->name('deleteKajianDanPenyelidikanController');
+

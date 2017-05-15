@@ -199,18 +199,24 @@ License: You must have a valid license purchased only from themeforest(the above
 					</a>
 				</li>
 				<li>
+					<a href="{{ route('showPengajaranController') }}" class="li-hover">
+					<i class="fa fa-calendar hover-icon"></i>
+					<span class="title">Pengajaran</span>
+					</a>
+				</li>
+				<li>
 					<a href="{{ route('showPenyeliaanController') }}" class="li-hover">
 					<i class="fa fa-calendar hover-icon"></i>
 					<span class="title">Penyeliaan</span>
 					</a>
 				</li>
 				<li>
-					<a href="{{ route('showPengajaranController') }}" class="li-hover">
+					<a href="{{ route('showKajianDanPenyelidikanController') }}" class="li-hover">
 					<i class="fa fa-calendar hover-icon"></i>
-					<span class="title">Pengajaran</span>
+					<span class="title">Kajian Dan Penyelidikan</span>
 					</a>
 				</li>
-                                <li>
+                <li>
 					<a target="_blank" href="{{ url('/resume/0') }}" class="li-hover">
 					<i class="fa fa-calendar hover-icon"></i>
 					<span class="title">Cetak Resume</span>
