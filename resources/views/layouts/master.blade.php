@@ -216,7 +216,19 @@ License: You must have a valid license purchased only from themeforest(the above
 					<span class="title">Kajian Dan Penyelidikan</span>
 					</a>
 				</li>
-                <li>
+                                <li>
+					<a href="{{ route('showPenerbitan') }}" class="li-hover">
+					<i class="fa fa-calendar hover-icon"></i>
+					<span class="title">Penerbitan</span>
+					</a>
+				</li>
+                                <li>
+					<a href="{{ route('showPenilaiAkademik') }}" class="li-hover">
+					<i class="fa fa-calendar hover-icon"></i>
+					<span class="title">Penilai Akademik</span>
+					</a>
+				</li>
+                                <li>
 					<a target="_blank" href="{{ url('/resume/0') }}" class="li-hover">
 					<i class="fa fa-calendar hover-icon"></i>
 					<span class="title">Cetak Resume</span>

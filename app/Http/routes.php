@@ -59,3 +59,14 @@ Route::post('/createkajiandanpenyelidikan', ['uses'=>'KajianDanPenyelidikanContr
 Route::patch('/updatekajiandanpenyelidikan', ['uses'=>'KajianDanPenyelidikanController@updateKajianDanPenyelidikan'])->name('updateKajianDanPenyelidikanController');
 Route::delete('/deletekajiandanpenyelidikan', ['uses'=>'KajianDanPenyelidikanController@deleteKajianDanPenyelidikan'])->name('deleteKajianDanPenyelidikanController');
 
+Route::get('/penerbitan', ['uses'=>'PenerbitanController@showPenerbitan'])->name('showPenerbitan');
+Route::post('/createpenerbitan', ['uses'=>'PenerbitanController@createPenerbitan'])->name('createPenerbitan');
+Route::patch('/updatepenerbitan', ['uses'=>'PenerbitanController@updatePenerbitan'])->name('updatePenerbitan');
+Route::delete('/deletepenerbitan', ['uses'=>'PenerbitanController@deletePenerbitan'])->name('deletePenerbitan');
+
+
+Route::get('/penilaiakademik', ['uses'=>'PenilaiAkademikController@showPenilaiAkademik'])->name('showPenilaiAkademik');
+Route::post('/createpenilaiakademik', ['uses'=>'PenilaiAkademikController@createPenilaiAkademik'])->name('createPenilaiAkademik');
+Route::patch('/updatepenilaiakademik', ['uses'=>'PenilaiAkademikController@updatePenilaiAkademik'])->name('updatePenilaiAkademik');
+Route::delete('/deletepenilaiakademik', ['uses'=>'PenilaiAkademikController@deletePenilaiAkademik'])->name('deletePenilaiAkademik');
+

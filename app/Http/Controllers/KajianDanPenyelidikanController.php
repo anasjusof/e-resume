@@ -14,7 +14,7 @@ class KajianDanPenyelidikanController extends Controller
     public function showKajianDanPenyelidikan(){
     	$kajiandanpenyelidikans = KajianDanPenyelidikan::where('user_id', Auth::user()->id)->paginate(5);
 
-    	return view('user.kajiandanpenyelidikan', compact('kajiandanpenyelidikans'));
+    	return view('user.kajianDanPenyelidikan', compact('kajiandanpenyelidikans'));
     }
 
     public function createKajianDanPenyelidikan(Request $request){
