@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use App\Http\Requests\PenerbitanRequest;
 
 use Auth;
 use App\Penerbitan;
@@ -17,7 +18,7 @@ class PenerbitanController extends Controller
     	return view('user.penerbitan', compact('penerbitans'));
     }
 
-    public function createPenerbitan(Request $request){
+    public function createPenerbitan(PenerbitanRequest $request){
     	
     	$input = $request->all();
 
@@ -37,7 +38,7 @@ class PenerbitanController extends Controller
     	return redirect()->back();
     }
 
-    public function updatePenerbitan(Request $request){
+    public function updatePenerbitan(PenerbitanRequest $request){
 
 		$input = $request->all();
 		$penerbitan = Penerbitan::findOrFail($input['id']);

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use App\Http\Requests\KajianDanPenyelidikanRequest;
 
 use Auth;
 use App\KajianDanPenyelidikan;
@@ -17,13 +18,13 @@ class KajianDanPenyelidikanController extends Controller
     	return view('user.kajianDanPenyelidikan', compact('kajiandanpenyelidikans'));
     }
 
-    public function createKajianDanPenyelidikan(Request $request){
+    public function createKajianDanPenyelidikan(KajianDanPenyelidikanRequest $request){
     	
-    	$input = $request->all();
+            $input = $request->all();
 
-		KajianDanPenyelidikan::create($input);
+            KajianDanPenyelidikan::create($input);
 
-		return redirect()->back();
+            return redirect()->back();
     }
 
     public function deleteKajianDanPenyelidikan(Request $request){
@@ -37,7 +38,7 @@ class KajianDanPenyelidikanController extends Controller
     	return redirect()->back();
     }
 
-    public function updateKajianDanPenyelidikan(Request $request){
+    public function updateKajianDanPenyelidikan(KajianDanPenyelidikanRequest $request){
 
 		$input = $request->all();
 		$kajiandanpenyelidikan = KajianDanPenyelidikan::findOrFail($input['id']);

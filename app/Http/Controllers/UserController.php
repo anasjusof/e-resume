@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use App\Http\Requests\UserRequest;
 
 use Auth;
 use App\User;
@@ -22,7 +23,7 @@ class UserController extends Controller
     	return view('user.maklumatPeribadi', compact('user'));
     }
 
-    public function updateMaklumatPeribadi(Request $request){
+    public function updateMaklumatPeribadi(UserRequest $request){
     	$input = $request->all();
 
     	$user = User::find($input['id']);

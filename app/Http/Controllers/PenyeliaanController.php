@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use App\Http\Requests\PenyeliaanRequest;
 
 use Auth;
 use App\Penyeliaan;
@@ -17,7 +18,7 @@ class PenyeliaanController extends Controller
     	return view('user.penyeliaan', compact('penyeliaans'));
     }
 
-    public function createPenyeliaan(Request $request){
+    public function createPenyeliaan(PenyeliaanRequest $request){
     	
     	$input = $request->all();
 
@@ -37,7 +38,7 @@ class PenyeliaanController extends Controller
     	return redirect()->back();
     }
 
-    public function updatePenyeliaan(Request $request){
+    public function updatePenyeliaan(PenyeliaanRequest $request){
 
 		$input = $request->all();
 		$penyeliaan = Penyeliaan::findOrFail($input['id']);

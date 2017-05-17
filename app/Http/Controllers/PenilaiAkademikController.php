@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use App\Http\Requests\PenilaiAkademikRequest;
 
 use Auth;
 use App\PenilaiAkademik;
@@ -17,7 +18,7 @@ class PenilaiAkademikController extends Controller
     	return view('user.penilaiAkademik', compact('penilaiakademiks'));
     }
 
-    public function createPenilaiAkademik(Request $request){
+    public function createPenilaiAkademik(PenilaiAkademikRequest $request){
 
     	$input = $request->all();
 
@@ -37,7 +38,7 @@ class PenilaiAkademikController extends Controller
     	return redirect()->back();
     }
 
-    public function updatePenilaiAkademik(Request $request){
+    public function updatePenilaiAkademik(PenilaiAkademikRequest $request){
 
 		$input = $request->all();
 		$penilaiakademik = PenilaiAkademik::findOrFail($input['id']);

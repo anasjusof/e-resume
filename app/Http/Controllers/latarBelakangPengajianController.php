@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use App\Http\Requests\LatarBelakangPengajianRequest;
 
 use Auth;
 use App\LatarBelakangPengajian;
@@ -17,7 +18,7 @@ class latarBelakangPengajianController extends Controller
     	return view('user.latarBelakangPengajian', compact('latarBelakangPengajians'));
     }
 
-    public function createLatarBelakangPengajian(Request $request){
+    public function createLatarBelakangPengajian(LatarBelakangPengajianRequest $request){
     	
     	$input = $request->all();
 
@@ -37,7 +38,7 @@ class latarBelakangPengajianController extends Controller
     	return redirect()->back();
     }
 
-    public function updateLatarBelakangPengajian(Request $request){
+    public function updateLatarBelakangPengajian(LatarBelakangPengajianRequest $request){
 
 		$input = $request->all();
 		$latarBelakangPengajian = LatarBelakangPengajian::findOrFail($input['id']);

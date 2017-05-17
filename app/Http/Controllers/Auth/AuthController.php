@@ -49,6 +49,26 @@ class AuthController extends Controller
      */
     protected function validator(array $data)
     {
+        $messages = [
+            'name.required' => 'Sila isi nama penuh.',
+            'email.required' => 'Sila isi email',
+            'password.required' => 'Sila isi kata laluan',
+            'jawatan.required' => 'Sila isi jawatan',
+            'jabatan.required' => 'Sila isi jabatan',
+            'fakulti.required' => 'Sila isi fakulti',
+            'phone.required' => 'Sila isi no telefon',
+            'staff_id.required' => 'Sila isi id staf',
+            'image.required' => 'Sila upload gambar profil',
+            
+            'email.unique' => 'Email telah berdaftar',
+            'email.email' => 'Sila isi format email yang betul',
+            
+            'password.confirmed' => 'Kata laluan tidak sama',
+            'password.min' => 'Kata laluan mesti lebih 6 karakter',
+            
+            'staff_id.unique' => 'ID staf telah berdaftar',
+        ];
+        
         return Validator::make($data, [
             'name' => 'required|max:255',
             'email' => 'required|email|max:255|unique:users',
@@ -58,7 +78,8 @@ class AuthController extends Controller
             'fakulti' => 'required',
             'phone' => 'required',
             'staff_id' => 'required|unique:users',
-        ]);
+            'image' => 'required'
+        ], $messages);
     }
 
     /**

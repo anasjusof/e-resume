@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use App\Http\Requests\PengajaranRequest;
 
 use Auth;
 use App\Pengajaran;
@@ -17,7 +18,7 @@ class PengajaranController extends Controller
     	return view('user.pengajaran', compact('pengajarans'));
     }
 
-    public function createPengajaran(Request $request){
+    public function createPengajaran(PengajaranRequest $request){
     	
     	$input = $request->all();
 
@@ -37,7 +38,7 @@ class PengajaranController extends Controller
     	return redirect()->back();
     }
 
-    public function updatePengajaran(Request $request){
+    public function updatePengajaran(PengajaranRequest $request){
 
 		$input = $request->all();
 		$pengajaran = Pengajaran::findOrFail($input['id']);
