@@ -32,8 +32,8 @@ Route::get('/home', 'HomeController@index');
 
 Route::get('/showRegister', ['uses'=>'UserController@showRegister'])->name('showRegister');
 
-#if auth(both admin and lecturer), then can use this route
-Route::group(['middleware'=>['auth']], function(){
+#if RoleMiddleware is either 1 or 0
+Route::group(['middleware'=>['auth', 'RoleMiddleware:1|0']], function(){
     Route::get('/resume/{id}', ['uses'=>'ResumeController@index'])->name('showResume');
 });
 
